@@ -10,7 +10,7 @@
 
     <color name="orangeDark">#985B00</color>
     <color name="orangeMid">#C17300</color>
-    <color name="oranjeLigh">#FF9800</color>
-    <color name="ligh">#FFBF00</color>
+    <color name="orangeLigh">#FF9800</color>
+    <color name="yellow">#FFBF00</color>
 
 </resources>
