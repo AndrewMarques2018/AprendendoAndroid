@@ -2,10 +2,10 @@
 
     <style name="Theme.App3_pedra_papel_tesoura" parent="Theme.AppCompat">
 
-        <item name="colorPrimary">@color/primary</item>
-        <item name="colorPrimaryDark">@color/primaryDark</item>
+        <item name="colorPrimary">#05B359</item>
+        <item name="colorPrimaryDark">#019F40</item>
         <item name="colorAccent">@color/accent</item>
-        <item name="android:colorBackground">@color/backGround</item>
+        <item name="android:colorBackground">#7ACC9B</item>
         <item name="android:textColor">@color/corTexto</item>
         <item name="android:textColorPrimary">@color/corTexto</item>
 

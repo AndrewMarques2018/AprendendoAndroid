@@ -7,15 +7,6 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/txtTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -25,5 +16,82 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imgBtPapel"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="50dp"
+        android:onClick="click"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgBtEscolhaMaquina"
+        app:srcCompat="@drawable/papel"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/imgBtEscolhaMaquina"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+        app:srcCompat="@android:drawable/ic_menu_help"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/imgBtPedra"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/app_name"
+        android:onClick="click"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/imgBtTesoura"
+        app:layout_constraintStart_toEndOf="@+id/imgBtPapel"
+        app:layout_constraintTop_toTopOf="@+id/imgBtPapel"
+        app:srcCompat="@drawable/pedra" />
+
+    <ImageButton
+        android:id="@+id/imgBtTesoura"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="24dp"
+        android:onClick="click"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgBtPedra"
+        app:srcCompat="@drawable/tesoura"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Escolha da maquina"
+        app:layout_constraintBottom_toTopOf="@+id/imgBtEscolhaMaquina"
+        app:layout_constraintEnd_toEndOf="@+id/imgBtEscolhaMaquina"
+        app:layout_constraintStart_toStartOf="@+id/imgBtEscolhaMaquina" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sua escolha"
+        app:layout_constraintBottom_toTopOf="@+id/imgBtPedra"
+        app:layout_constraintEnd_toEndOf="@+id/imgBtPedra"
+        app:layout_constraintStart_toStartOf="@+id/imgBtPedra" />
+
+    <TextView
+        android:id="@+id/txtResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgBtPedra" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
