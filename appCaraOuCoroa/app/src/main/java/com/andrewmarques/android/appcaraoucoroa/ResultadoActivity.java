@@ -17,12 +17,12 @@ public class ResultadoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         btVoltar = findViewById(R.id.btVoltar);
+        imgResultado = findViewById(R.id.imageResultado);
         setContentView(R.layout.activity_resultado);
 
         Bundle dados = getIntent().getExtras();
         int i = dados.getInt("numero");
 
-        imgResultado = findViewById(R.id.imageResultado);
         if (i == 0){
             // cara
             imgResultado.setImageResource(R.drawable.cara);
