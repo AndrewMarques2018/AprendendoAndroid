@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
     private Button btJogar;
@@ -22,6 +24,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), ResultadoActivity.class);
+
+                int numRand = new Random().nextInt(2);
+                intent.putExtra("numero", numRand);
+
                 startActivity(intent);
             }
         });
