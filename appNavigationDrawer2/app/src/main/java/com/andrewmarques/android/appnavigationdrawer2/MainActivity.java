@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void enviarEmail (){
         //String celular = "tel:5589999999";
-        //Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse(celular)); // ligaçao
+        //Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse(celular));
 
         //String imagem = "https://s3.observador.pt/wp-content/uploads/2018/04/30162722/peniche1.jpg";
         //Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(imagem));
@@ -65,10 +65,15 @@ public class MainActivity extends AppCompatActivity {
         //String mapa = "https://www.google.com.br/maps?q=beach+park&sxsrf=ALiCzsYNCcD4gEF-eRr1tMEZjPuNGP94Ag:1662993072278&iflsig=AJiK0e8AAAAAYx9QwMeuhMqs9t6Lktt1Q7HhoB2-_ZeK&gs_lcp=Cgdnd3Mtd2l6EAEYADIECCMQJzIICAAQgAQQsQMyCwguEIAEEMcBEK8BMgsIABCABBCxAxCDATIFCAAQgAQyCwguEIAEEMcBEK8BMggIABCABBCxAzILCC4QgAQQsQMQgwEyBQgAEIAEMgUIABCABDoRCC4QgAQQsQMQgwEQxwEQ0QM6CAguELEDEIMBOggIABCxAxCDAToOCC4QgAQQsQMQgwEQ1AI6CAguEIAEELEDOgsILhCABBCxAxDUAlAAWLoJYPgWaABwAHgAgAGrAYgBvgSSAQMwLjSYAQCgAQE&um=1&ie=UTF-8&sa=X&ved=2ahUKEwi42Pv8u4_6AhXlpZUCHU7cDFgQ_AUoAXoECAIQAw";
         //Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(mapa));
 
-        String celular = "tel:5589999999";
-        Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse(celular));
-
-        startActivity(intent);
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.putExtra( Intent.EXTRA_EMAIL, new String[] {"atendimento@atmconsultoria.com.br"});
+        intent.putExtra( Intent.EXTRA_SUBJECT, "contato pelo app");
+        intent.putExtra( Intent.EXTRA_TEXT, "Menssagem automatica");
+        intent.setType("message/rfc822"); // mais tipos em mime types
+        //intent.setType("text/plain");
+        //intent.setType("image/png");
+        //intent.setType("application/pdf");
+        startActivity(Intent.createChooser(intent, "compartilhar"));
     }
 
     @Override
