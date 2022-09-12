@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/4U/Documents/GitHub/Aprendendo_Android/appNavigationDrawer2/app/src/main/res/drawable/degrade_fundo_navegacao.xml" value="0.1" />
+        <entry key="..\:/Users/4U/Documents/GitHub/Aprendendo_Android/appNavigationDrawer2/app/src/main/res/drawable/side_nav_bar.xml" value="0.1705" />
         <entry key="..\:/Users/4U/Documents/GitHub/Aprendendo_Android/appNavigationDrawer2/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/4U/Documents/GitHub/Aprendendo_Android/appNavigationDrawer2/app/src/main/res/layout/content_main.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/4U/Documents/GitHub/Aprendendo_Android/appNavigationDrawer2/app/src/main/res/layout/nav_header_main.xml" value="0.33" />
       </map>
     </option>
   </component>
