@@ -1,5 +1,7 @@
 package com.andrewmarques.android.appnavigationdrawer2;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
@@ -32,8 +34,7 @@ public class MainActivity extends AppCompatActivity {
         binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                enviarEmail();
             }
         });
         DrawerLayout drawer = binding.drawerLayout;
@@ -52,6 +53,22 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+    }
+
+    public void enviarEmail (){
+        //String celular = "tel:5589999999";
+        //Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse(celular)); // ligaçao
+
+        //String imagem = "https://s3.observador.pt/wp-content/uploads/2018/04/30162722/peniche1.jpg";
+        //Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(imagem));
+
+        //String mapa = "https://www.google.com.br/maps?q=beach+park&sxsrf=ALiCzsYNCcD4gEF-eRr1tMEZjPuNGP94Ag:1662993072278&iflsig=AJiK0e8AAAAAYx9QwMeuhMqs9t6Lktt1Q7HhoB2-_ZeK&gs_lcp=Cgdnd3Mtd2l6EAEYADIECCMQJzIICAAQgAQQsQMyCwguEIAEEMcBEK8BMgsIABCABBCxAxCDATIFCAAQgAQyCwguEIAEEMcBEK8BMggIABCABBCxAzILCC4QgAQQsQMQgwEyBQgAEIAEMgUIABCABDoRCC4QgAQQsQMQgwEQxwEQ0QM6CAguELEDEIMBOggIABCxAxCDAToOCC4QgAQQsQMQgwEQ1AI6CAguEIAEELEDOgsILhCABBCxAxDUAlAAWLoJYPgWaABwAHgAgAGrAYgBvgSSAQMwLjSYAQCgAQE&um=1&ie=UTF-8&sa=X&ved=2ahUKEwi42Pv8u4_6AhXlpZUCHU7cDFgQ_AUoAXoECAIQAw";
+        //Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(mapa));
+
+        String celular = "tel:5589999999";
+        Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse(celular));
+
+        startActivity(intent);
     }
 
     @Override
