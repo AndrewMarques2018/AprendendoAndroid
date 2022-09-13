@@ -8,68 +8,68 @@
     tools:context=".Fragments.BichosFragment">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/btCachorro"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:src="@drawable/cao"
-        app:layout_constraintBottom_toTopOf="@+id/imageView3"
-        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintBottom_toTopOf="@+id/btLeao"
+        app:layout_constraintEnd_toStartOf="@+id/btGato"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/btGato"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:src="@drawable/gato"
-        app:layout_constraintBottom_toTopOf="@+id/imageView4"
+        app:layout_constraintBottom_toTopOf="@+id/btMacaco"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/btCachorro"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/btLeao"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:src="@drawable/leao"
-        app:layout_constraintBottom_toTopOf="@+id/imageView5"
-        app:layout_constraintEnd_toStartOf="@+id/imageView4"
+        app:layout_constraintBottom_toTopOf="@+id/btOvelha"
+        app:layout_constraintEnd_toStartOf="@+id/btMacaco"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/btCachorro" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/btMacaco"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:src="@drawable/macaco"
-        app:layout_constraintBottom_toTopOf="@+id/imageView6"
+        app:layout_constraintBottom_toTopOf="@+id/btVaca"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintStart_toEndOf="@+id/btLeao"
+        app:layout_constraintTop_toBottomOf="@+id/btGato" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/btOvelha"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:src="@drawable/ovelha"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageView6"
+        app:layout_constraintEnd_toStartOf="@+id/btVaca"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintTop_toBottomOf="@+id/btLeao" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/btVaca"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:src="@drawable/vaca"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        app:layout_constraintStart_toEndOf="@+id/btOvelha"
+        app:layout_constraintTop_toBottomOf="@+id/btMacaco" />
 </androidx.constraintlayout.widget.ConstraintLayout>
