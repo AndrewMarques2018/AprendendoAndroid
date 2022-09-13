@@ -9,7 +9,9 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/Theme.AppAprendendoIngles2.AppBarOverlay">
+        android:theme="@style/Theme.AppAprendendoIngles2"
+        android:background="@color/colorPrimary"
+        >
 
         <TextView
             android:id="@+id/title"
@@ -25,7 +27,8 @@
             android:id="@+id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:ignore="SpeakableTextPresentCheck" />
+            tools:ignore="SpeakableTextPresentCheck"
+            app:tabIndicatorColor="@android:color/white"/>
 
     </com.google.android.material.appbar.AppBarLayout>
 
