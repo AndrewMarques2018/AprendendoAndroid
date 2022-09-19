@@ -1,5 +1,6 @@
 package com.andrewmarques.android.applistadetarefas3.activity;
 
+import android.content.ContentValues;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +13,7 @@ import android.view.View;
 import com.andrewmarques.android.applistadetarefas3.R;
 import com.andrewmarques.android.applistadetarefas3.adapter.TarefaAdapter;
 import com.andrewmarques.android.applistadetarefas3.databinding.ActivityMainBinding;
+import com.andrewmarques.android.applistadetarefas3.helper.DBHelper;
 import com.andrewmarques.android.applistadetarefas3.helper.RecyclerItemClickListener;
 import com.andrewmarques.android.applistadetarefas3.model.Tarefa;
 
@@ -39,6 +41,12 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(binding.toolbar);
 
         recyclerView = findViewById(R.id.recyclerView);
+
+        DBHelper db = new DBHelper( getApplicationContext() );
+
+        ContentValues cv = new ContentValues();
+        cv.put("nome", "teste");
+        db.getWritableDatabase().insert("tarefas", null, cv);
 
         //adicionar evento de clicks
         recyclerView.addOnItemTouchListener(
