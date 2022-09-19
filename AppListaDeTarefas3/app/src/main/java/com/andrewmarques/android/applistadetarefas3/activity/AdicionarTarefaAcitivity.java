@@ -1,7 +1,9 @@
-package com.andrewmarques.android.applistadetarefas3;
+package com.andrewmarques.android.applistadetarefas3.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.andrewmarques.android.applistadetarefas3.R;
 
 public class AdicionarTarefaAcitivity extends AppCompatActivity {
 
