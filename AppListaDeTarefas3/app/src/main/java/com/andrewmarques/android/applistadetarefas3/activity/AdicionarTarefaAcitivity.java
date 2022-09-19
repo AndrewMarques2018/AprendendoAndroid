@@ -16,13 +16,21 @@ import com.andrewmarques.android.applistadetarefas3.model.Tarefa;
 public class AdicionarTarefaAcitivity extends AppCompatActivity {
 
     private TextView editTarefa;
-
+    private Tarefa tarefaAtual;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adicionar_tarefa);
 
         editTarefa = findViewById(R.id.txtTarefa);
+
+        //recuperar tarefa, caso seja edicao
+        tarefaAtual = (Tarefa) getIntent().getSerializableExtra("tarefaSelecionada");
+
+        // configurar caixa de texto
+        if (tarefaAtual != null){
+            editTarefa.setText( tarefaAtual.getNomeTarefa() );
+        }
     }
 
     @Override
