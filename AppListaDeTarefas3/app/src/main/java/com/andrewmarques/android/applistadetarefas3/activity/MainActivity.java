@@ -15,6 +15,7 @@ import com.andrewmarques.android.applistadetarefas3.adapter.TarefaAdapter;
 import com.andrewmarques.android.applistadetarefas3.databinding.ActivityMainBinding;
 import com.andrewmarques.android.applistadetarefas3.helper.DBHelper;
 import com.andrewmarques.android.applistadetarefas3.helper.RecyclerItemClickListener;
+import com.andrewmarques.android.applistadetarefas3.helper.TarefaDAO;
 import com.andrewmarques.android.applistadetarefas3.model.Tarefa;
 
 import android.view.Menu;
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
     private RecyclerView recyclerView;
     private TarefaAdapter tarefaAdapter;
+    List<Tarefa> tarefas = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,23 +78,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void carregarListaTarefas () {
 
-        // Listar Tarefas
-        // Exibir lista no recicler
-        // configurar adapter
-
-        Tarefa tarefa1 = new Tarefa();
-        tarefa1.setNomeTarefa("Ir ao Mercado");
-
-        Tarefa tarefa2 = new Tarefa();
-        tarefa2.setNomeTarefa("Ir a Praia");
-
-        Tarefa tarefa3 = new Tarefa();
-        tarefa3.setNomeTarefa("Ir ao cinema");
-
-        List<Tarefa> tarefas = new ArrayList<>();
-        tarefas.add(tarefa1);
-        tarefas.add(tarefa2);
-        tarefas.add(tarefa3);
+        TarefaDAO tarefaDAO = new TarefaDAO(getApplicationContext());
+        tarefas = tarefaDAO.listar();
 
 
         tarefaAdapter = new TarefaAdapter(tarefas);
