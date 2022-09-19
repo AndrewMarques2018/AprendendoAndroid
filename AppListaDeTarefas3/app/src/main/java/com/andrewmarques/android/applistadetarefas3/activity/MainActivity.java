@@ -42,12 +42,6 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recyclerView);
 
-        DBHelper db = new DBHelper( getApplicationContext() );
-
-        ContentValues cv = new ContentValues();
-        cv.put("nome", "teste");
-        db.getWritableDatabase().insert("tarefas", null, cv);
-
         //adicionar evento de clicks
         recyclerView.addOnItemTouchListener(
                 new RecyclerItemClickListener(
