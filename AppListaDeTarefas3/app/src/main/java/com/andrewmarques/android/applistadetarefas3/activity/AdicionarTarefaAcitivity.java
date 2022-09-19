@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.andrewmarques.android.applistadetarefas3.R;
 import com.andrewmarques.android.applistadetarefas3.helper.TarefaDAO;
@@ -46,13 +47,39 @@ public class AdicionarTarefaAcitivity extends AppCompatActivity {
                 // Executar uma acao para o item salvar
                 TarefaDAO tarefaDAO = new TarefaDAO(getApplicationContext());
 
-                String nomeTarefa = editTarefa.getText().toString();
-                if(!nomeTarefa.isEmpty()){
-                    Tarefa tarefa = new Tarefa();
-                    tarefa.setNomeTarefa(nomeTarefa);
 
-                    tarefaDAO.salvar(tarefa);
-                    finish();
+                if(tarefaAtual != null){ // edicao
+
+                    String nomeTarefa = editTarefa.getText().toString();
+                    if(!nomeTarefa.isEmpty()){
+
+                        Tarefa tarefa = new Tarefa();
+                        tarefa.setNomeTarefa( nomeTarefa );
+                        tarefa.setId(tarefaAtual.getId());
+
+                        // atualizar banco de dados
+                        if( tarefaDAO.atualizar(tarefa) ){
+                            Toast.makeText(getApplicationContext(), "Sucesso ao salvar tarefa!", Toast.LENGTH_SHORT).show();
+                        }else{
+                            Toast.makeText(getApplicationContext(), "Erro ao salvar tarefa!", Toast.LENGTH_SHORT).show();
+                        }
+                        finish();
+                    }
+
+                }else { // salvar
+                    String nomeTarefa = editTarefa.getText().toString();
+                    if(!nomeTarefa.isEmpty()){
+                        Tarefa tarefa = new Tarefa();
+                        tarefa.setNomeTarefa(nomeTarefa);
+
+                        if( tarefaDAO.salvar(tarefa) ){
+                            Toast.makeText(getApplicationContext(), "Sucesso ao salvar tarefa!", Toast.LENGTH_SHORT).show();
+                        }else{
+                            Toast.makeText(getApplicationContext(), "Erro ao salvar tarefa!", Toast.LENGTH_SHORT).show();
+                        }
+                        finish();
+                }
+
                 }
 
                 break;
